@@ -1,0 +1,21 @@
+{
+
+    "manifest_version": 2,
+    "name": "Campus+",
+    "version": "1.0",
+  
+    "description": "Makes campus usable",
+  
+    "icons": {
+      "48": "icons/campus.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.campus.inkrement.no/*"],
+        "js": ["fixCSS.js"]
+      }
+    ]
+  
+  }
+  
