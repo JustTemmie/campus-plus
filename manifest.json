@@ -1,21 +1,43 @@
 {
+  "manifest_version": 2,
+  "name": "Campus+ (beta)",
+  "version": "1.0",
 
-    "manifest_version": 2,
-    "name": "Campus+",
-    "version": "1.0",
-  
-    "description": "Makes campus usable",
-  
-    "icons": {
-      "48": "icons/campus.png"
+  "description": "Makes campus usable",
+
+  "icons": {
+    "48": "icons/campus.png"
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "TemmieBusiness@proton.me"
+    }
+  },
+
+  "permissions" : [
+    "storage"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.campus.inkrement.no/*"],
+      "js": ["app.js", "beta.js"]
     },
-  
-    "content_scripts": [
-      {
-        "matches": ["*://*.campus.inkrement.no/*"],
-        "js": ["fixCSS.js"]
-      }
-    ]
-  
+    {
+      "matches": ["*://*.campus.inkrement.no/Discussion*"],
+      "js": ["scripts/customCSS.js", "scripts/customAvatars.js"]
+    },
+    {
+      "matches": ["*://*.campus.inkrement.no/Assignment*"],
+      "js": ["scripts/removeHand.js"]
+    }
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/campus.png",
+    "default_title": "campus+",
+    "default_popup": "popup/view.html"
   }
+}
   
