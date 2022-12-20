@@ -4,8 +4,8 @@ function removeHand() {
 }
 
 async function checkSettings() {
-    let reziseCSS = await browser.storage.local.get("removeHand")
-    if (reziseCSS["removeHand"]) {
+    let settings = await browser.storage.local.get({"removeHand": true})
+    if (settings["removeHand"]) {
         setInterval(removeHand, 100)
     }
 }

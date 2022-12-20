@@ -5,8 +5,8 @@ function resizeCSS() {
 }
 
 async function checkSettings() {
-    let reziseCSS = await browser.storage.local.get("discussionCSS")
-    if (reziseCSS["discussionCSS"]) {
+    let settings = await browser.storage.local.get({"discussionCSS": true})
+    if (settings["discussionCSS"]) {
         resizeCSS()
     }
 }

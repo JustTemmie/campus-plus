@@ -1,12 +1,9 @@
 console.log('popup!');
 
-const removeHandButton = document.getElementById("removeHand");
-const discussionCSSButton = document.getElementById("discussionCSS");
-
 var buttons = document.getElementsByClassName("buttonParent");
 
 // the ID names that are expected to be stored
-const settingsList = ["removeHand", "discussionCSS"]
+const settingsList = ["removeHand", "discussionCSS", "insulter"]
 
 for (let i = 0; i < buttons.length; i++) {
     let button = buttons[i];
@@ -26,13 +23,10 @@ async function handleClick(button) {
         button.children[1].checked = false;
     }
 
-    await storeSettings(button.id)
+    await storeSettings(button.id, button.className.includes("active"))
 }
-async function storeSettings(setting) {
-    let settings = await browser.storage.local.get({[setting]: true})
-    settings = settings[setting]
-    settings = !settings
-    browser.storage.local.set({[setting]: settings})
+async function storeSettings(setting, setTo) {
+    browser.storage.local.set({[setting]: setTo})
 }
 
 async function loadSettings() {
@@ -42,6 +36,19 @@ async function loadSettings() {
             document.getElementById(key).classList.remove("active")
             document.getElementById(key).children[1].checked = false;
         }
+    }
+
+    let remove = true
+
+    Object.entries(settings).forEach(thing => {
+        if (thing.includes("insulter")) {
+            remove = false
+        }
+    })
+
+    if (remove) {
+        document.getElementById("insulter").classList.remove("active")
+        document.getElementById("insulter").children[1].checked = false;
     }
 }
 

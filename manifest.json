@@ -2,8 +2,10 @@
   "manifest_version": 2,
   "name": "Campus+ (beta)",
   "version": "1.0.1",
+  "author": "Temmie",
 
   "description": "Makes campus usable",
+  "homepage_url": "https://github.com/JustTemmie/campus-plus",
 
   "icons": {
     "48": "icons/campus.png"
@@ -26,7 +28,7 @@
     },
     {
       "matches": ["*://*.campus.inkrement.no/Discussion*"],
-      "js": ["scripts/customCSS.js", "scripts/customAvatars.js"]
+      "js": ["scripts/customCSS.js", "scripts/customAvatars.js", "scripts/insulter.js"]
     },
     {
       "matches": ["*://*.campus.inkrement.no/Assignment*"],
@@ -36,7 +38,7 @@
 
   "browser_action": {
     "default_icon": "icons/campus.png",
-    "default_title": "campus+",
+    "default_title": "Campus+",
     "default_popup": "popup/view.html"
   }
 }
