@@ -11,12 +11,6 @@
     "48": "icons/campus.png"
   },
 
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "TemmieBusiness@proton.me"
-    }
-  },
-
   "permissions" : [
     "storage"
   ],
