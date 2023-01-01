@@ -31,6 +31,10 @@
       "js": ["scripts/customCSS.js", "scripts/customAvatars.js", "scripts/insulter.js"]
     },
     {
+      "matches": ["*://*.campus.inkrement.no/Education/Lecture*"],
+      "js": ["scripts/videoSpeed.js"]
+    },
+    {
       "matches": ["*://*.campus.inkrement.no/Assignment*"],
       "js": ["scripts/removeHand.js"]
     }

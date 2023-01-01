@@ -11,18 +11,22 @@
             <br>
             <h2>Settings</h2>
             <div class="buttons">
-                <div class="buttonParent active" id="removeHand">
+                <div class="buttonParent parentObject active" id="removeHand">
                     <label class="button">Remove the request Help Hand</label>
                     <input type="checkbox" checked="true">
                 </div>
-                <div class="buttonParent active" id="discussionCSS">
+                <div class="buttonParent parentObject active" id="discussionCSS">
                     <label class="button">Improve Discussion Page</label>
                     <input type="checkbox" checked="true">
+                </div>
+                <div class="nubmerParent parentObject active" id="videoPlaybackSpeed">
+                    <label>Lecture Playback Speed in %</label>
+                    <input id="videoPlaybackSpeedInput" type="number" value="100" min="20" max="800" step="5">
                 </div>
             </div>
             <h2>Questionable Settings</h2>
             <div class="buttons">
-                <div class="buttonParent active" id="insulter">
+                <div class="buttonParent parentObject active" id="insulter">
                     <label class="button">Make Campus insult You</label>
                     <input type="checkbox" checked="true">
                 </div>

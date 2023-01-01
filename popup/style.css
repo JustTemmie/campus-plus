@@ -12,6 +12,14 @@ input[type=checkbox] {
     word-break: break-all;
 }
 
+input[type=number] {
+    width: 5em;
+    margin-left: auto;
+    margin-right: 20px;
+    padding: 0;
+    word-break: break-all;
+}
+
 h1 {
     text-align: center;
     font-size: 48px;
@@ -21,7 +29,7 @@ h2 {
     padding-left: 10px;
 }
 
-.buttonParent {
+.parentObject {
     background-color: #2f343d;
     
     /* border: 5px solid red; */
