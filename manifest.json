@@ -11,9 +11,16 @@
     "48": "icons/campus.png"
   },
 
-  "permissions" : [
-    "storage"
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
   ],
+
+  "background": {
+    "scripts": ["testing.js"]
+  },
 
   "content_scripts": [
     {
@@ -26,7 +33,7 @@
     },
     {
       "matches": ["*://*.campus.inkrement.no/Education/Lecture*"],
-      "js": ["scripts/videoSpeed.js"]
+      "js": ["scripts/videoSpeed.js", "scripts/removeHand.js"]
     },
     {
       "matches": ["*://*.campus.inkrement.no/Assignment*"],
