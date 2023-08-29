@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <body>
-        <div id="popup-content">
-            <h1>Campus+</h1>
+<body>
+    <div id="popup-content">
+        <div class="header">
+            <h1 style="color: #fff;">Campus+</h1>
+            <!-- you literally need to do the color. style.css refuses to change it -->
             <br>
-            <h2>Settings</h2>
-            <div class="buttons">
-                <div class="buttonParent parentObject active" id="removeHand">
-                    <label class="button">Remove the request Help Hand</label>
-                    <input type="checkbox" checked="true">
-                </div>
-                <div class="buttonParent parentObject active" id="discussionCSS">
-                    <label class="button">Improve Discussion Page</label>
-                    <input type="checkbox" checked="true">
-                </div>
-                <div class="nubmerParent parentObject active" id="videoPlaybackSpeed">
-                    <label>Lecture Playback Speed in %</label>
-                    <input id="videoPlaybackSpeedInput" type="number" value="100" min="20" max="800" step="5">
-                </div>
+        </div>
+        <h2>Innstillinger</h2>
+        <div class="buttons">
+            <div class="buttonParent parentObject active" id="removeHand">
+                <label class="button">Fjern "Reis Hånden"-knappen</label>
+                <input type="checkbox" checked="true">
             </div>
-            <h2>Questionable Settings</h2>
-            <div class="buttons">
-                <div class="buttonParent parentObject active" id="insulter">
-                    <label class="button">Make Campus insult You</label>
-                    <input type="checkbox" checked="true">
-                </div>
+            <!-- <div class="buttonParent parentObject active" id="discussionCSS">
+                <label class="button">Forbedre diskusjonssiden</label>
+                <input type="checkbox" checked="true">
+            </div> -->
+            <div class="numberParent parentObject active" id="videoPlaybackSpeed">
+                <label>Videohastighet (%)</label>
+                <input id="videoPlaybackSpeedInput" type="number" value="100" min="20" max="800" step="10">
             </div>
         </div>
-        <script src="popup.js"></script>
-    </body>
+    </div>
+    <script src="popup.js"></script>
+</body>
 </html>
