@@ -1,14 +1,15 @@
 body {
-    width: 400px;
-    background: #161c26;
-    color: #effcfe;
-    border-radius: 20px;
+    width: 300px;
+    background: #f5f5f5;
+    color: #000000;
+    border: none;
+    letter-spacing: -0.5px
 }
 
 input {
     margin-left: auto;
-    margin-right: 20px;
-    padding: 0;
+    margin-right: auto;
+    padding: none;
     word-break: break-all;
 }
 
@@ -18,25 +19,40 @@ input[type=number] {
 
 h1 {
     text-align: center;
-    font-size: 48px;
+    font-size: 34px;
+    font-family: "Inter", sans-serif;
+    letter-spacing: -0.5px;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    color: #fff;
+    font-weight: 700;
 }
 
 h2 {
-    padding-left: 10px;
+    padding: 10px;
+    text-align: left;
+    font-size: 28px;
+    font-family: "Inter", sans-serif;
+    letter-spacing: -0.5px;
 }
 
 .parentObject {
-    background-color: #2f343d;
-    
-    /* border: 5px solid red; */
+    background-color: #ddd;
     border-radius: 8px;
-    color: #effcfe;
+    color: #000;
+    font-family: "Inter", sans-serif;
     
-    margin: 20px 10px 20px 10px;
+    margin: 15px 10px 15px 10px;
     
     padding-left: 12px;
     padding-top: 12px;
     padding-bottom: 12px;
+
+    background-color: #fff; /* Background color of the box */
+                border: 1px solid #ccc; /* Border around the box */
+                border-left: 6px solid #128579; /* Left margin color and width */
+                padding: 15px; /* Padding inside the box */
+                border-radius: 6px; /* Rounded corners */
     
     width: 100% - 20px;
     transition-duration: 0.3s;
@@ -46,13 +62,23 @@ h2 {
 
 }
 
-.buttonParent:hover {
-    background-color: #404855;
-}
-
 .button {
     border: none;
     text-align: left;
     text-decoration: none;
     font-size: 16px;
+    font-family: "Inter", sans-serif;
+}
+
+/* Merged styles from view.html */
+.header {
+    background-color: #674d96;
+    text-align: center;
+    border: 0;
+}
+
+.header h1 {
+    color: #000;
+    font-family: "Inter", sans-serif;
+    margin: 0;
 }
