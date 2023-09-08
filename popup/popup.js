@@ -20,7 +20,8 @@ numberBtn.addEventListener("change", () => {
 
 
 // the ID names that are expected to be stored
-const booleanSettingsList = ["removeHand", "discussionCSS", "insulter"]
+const booleanSettingsList = ["removeHand", "oldDiscussion", "insulter"]
+const falseByDefault = ["oldDiscussion"]
 
 for (let i = 0; i < buttons.length; i++) {
     let button = buttons[i];
@@ -61,11 +62,13 @@ async function loadSettings() {
     }
 
     // code for entries that are false by default
-    let remove = true
+    let falseByDefault = true
 
     Object.entries(settings).forEach(thing => {
-        if (thing.includes("insulter")) {
-            remove = false
+        for (let i = 0; i < falseByDefault.length; i++) {
+            if (thing.includes(falseByDefault[i])) {
+                falseByDefault = true
+            }
         }
 
         if (thing.includes("videoPlaybackSpeedInput")) {
@@ -74,7 +77,7 @@ async function loadSettings() {
         }
     })
 
-    if (remove) {
+    if (falseByDefault) {
         document.getElementById("insulter").classList.remove("active")
         document.getElementById("insulter").children[1].checked = false;
     }

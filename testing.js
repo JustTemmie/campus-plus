@@ -1,14 +1,9 @@
-let pattern = "https://developer.mozilla.org/*";
-const targetUrl = "https://nationalzoo.si.edu/sites/default/files/styles/1400x700_scale_and_crop/public/animals/20181031-skipbrown112.jpg?itok=cUjU4IAl&timestamp=1542982168";
+let pattern = "https://campus.inkrement.no/Education/*";
+const targetUrl = "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
 
 function redirect(requestDetails) {
   console.log(`Redirecting: ${requestDetails.url}`);
-  if (requestDetails.url === targetUrl) {
-    return;
-  }
-  return {
-    redirectUrl: targetUrl
-  };
+  console.log(requestDetails)
 }
 
 browser.webRequest.onBeforeRequest.addListener(

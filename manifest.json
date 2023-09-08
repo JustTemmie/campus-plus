@@ -15,7 +15,11 @@
     "storage",
     "webRequest",
     "webRequestBlocking",
-    "<all_urls>"
+    "tabs",
+    "<all_urls>",
+    "activeTab",
+    "http://*/*",
+    "https://*/*"
   ],
 
   "background": {
@@ -29,15 +33,15 @@
     },
     {
       "matches": ["*://*.campus.inkrement.no/Discussion*"],
-      "js": ["scripts/customCSS.js", "scripts/customAvatars.js", "scripts/insulter.js"]
+      "js": ["scripts/oldDiscussions.js", "scripts/customAvatars.js"]
     },
     {
       "matches": ["*://*.campus.inkrement.no/Education/Lecture*"],
-      "js": ["scripts/videoSpeed.js", "scripts/removeHand.js"]
+      "js": ["scripts/videoSpeed.js", "scripts/removeHand.js", "scripts/insulter.js"]
     },
     {
       "matches": ["*://*.campus.inkrement.no/Assignment*"],
-      "js": ["scripts/removeHand.js"]
+      "js": ["scripts/removeHand.js", "scripts/insulter.js"]
     }
   ],
 

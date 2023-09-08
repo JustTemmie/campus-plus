@@ -4,10 +4,8 @@ function insulter() {
 }
 
 async function checkSettings() {
-    let settings = await browser.storage.local.get({"insulter": false})
     if (settings["insulter"]) {
-        console.log("HELLO!")
-        setInterval(insulter, 100)
+        document.getElementById("submit-answer")
     }
 }
 
